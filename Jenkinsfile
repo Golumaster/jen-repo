@@ -26,7 +26,7 @@ pipeline {
                 sh "docker rm -f ${IMAGE_NAME}-container || true"
                 
                 // Runs your new image (which contains Nginx) on web port 80
-                sh "docker run -d --name ${IMAGE_NAME}-container -p 80:80 ${IMAGE_NAME}:${IMAGE_TAG}"
+                sh "docker run -d --name ${IMAGE_NAME}-container -p 8085:80 ${IMAGE_NAME}:${IMAGE_TAG}"
             }
         }
     }
